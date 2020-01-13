@@ -6,7 +6,7 @@ from ViewPersonalData import PersonalDataViewer
 
 class TestPersonalDataViewer(unittest.TestCase):
     def setUp(self):
-        self.file_name = os.path.join(os.path.dirname(__file__), "Data", "data_sample_1.csv")
+        self.file_name = os.path.abspath(os.path.join(os.path.dirname(__file__), "Data", "data_sample_1.csv"))
         self.open_file = open(self.file_name, 'r')
         self.pdv = PersonalDataViewer([self.open_file])
 
@@ -21,7 +21,6 @@ class TestPersonalDataViewer(unittest.TestCase):
         self.assertTrue(self.pdv.data)
         self.assertIsInstance(self.pdv.data, dict)
         self.assertIn(self.file_name, self.pdv.data)
-
 
         self.assertListEqual(self.pdv.headers(self.file_name), self.data[self.file_name][0])
 

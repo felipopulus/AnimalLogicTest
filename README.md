@@ -17,4 +17,6 @@ Another way is to display the data in text form.
     python ViewPersonalData.py -i Data/data_sample_1.csv -d text
 
 
+To run the unit test, run the following command:
 
+    python ViewPersonalData_test.py

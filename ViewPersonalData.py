@@ -99,7 +99,7 @@ class PersonalDataViewer(object):
             if launch:
                 if subprocess.check_call(['open', filename]):
                     webbrowser.open_new(filename)
-            sys.stdout.write("File generated: {0}\n".format(filename))
+            sys.stdout.write("\nFile generated: {0}\n".format(filename))
 
         # Write and display CSV
         elif format_style == "csv":
