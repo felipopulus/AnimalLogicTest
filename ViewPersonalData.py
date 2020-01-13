@@ -23,6 +23,7 @@ class PersonalDataViewer(object):
             reader = list(csv.reader(fileread))
             self.__data.update({filename: reader})
             fileread.close()
+        self.supported_formats = ["html", "csv", "text"]
 
     @property
     def data(self):
